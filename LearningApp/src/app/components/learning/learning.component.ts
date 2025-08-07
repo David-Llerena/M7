@@ -17,4 +17,9 @@ export class LearningComponent implements OnInit {
   ngOnInit(): void {
     this.course = this.courseService.getCourse();
   }
+
+  getCardColor(index: number): string {
+    const colors = ['primary', 'success', 'info', 'warning'];
+    return colors[index % colors.length];
+  }
 }
