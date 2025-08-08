@@ -2,10 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from '../../model/Course';
 import { CourseService } from '../../services/course.service';
 import { CommonModule } from '@angular/common';
+import { CourseHeaderComponent } from '../course-header/course-header.component';
+import { StudentsListComponent } from '../students-list/students-list.component';
 
 @Component({
   selector: 'app-learning',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, CourseHeaderComponent, StudentsListComponent],
   templateUrl: './learning.component.html',
   styleUrl: './learning.component.css'
 })
@@ -18,8 +21,5 @@ export class LearningComponent implements OnInit {
     this.course = this.courseService.getCourse();
   }
 
-  getCardColor(index: number): string {
-    const colors = ['primary', 'success', 'info', 'warning'];
-    return colors[index % colors.length];
-  }
+  // Color helper moved to StudentsListComponent
 }

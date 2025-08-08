@@ -1,0 +1,32 @@
+<div class="card h-100 shadow-sm border-start border-4" [class]="'border-' + color">
+  <div class="card-body">
+    <div class="d-flex align-items-center mb-3">
+      <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+           [class]="'bg-' + color + ' text-white'"
+           style="width: 50px; height: 50px;">
+        <i class="fas fa-user fa-lg"></i>
+      </div>
+      <div>
+        <h5 class="card-title mb-1">{{ student.name }} {{ student.surname }}</h5>
+        <small class="text-muted">Estudiante #{{ student.id }}</small>
+      </div>
+    </div>
+    <div class="student-details">
+      <div class="mb-2">
+        <span class="badge bg-light text-dark">
+          <i class="fas fa-hashtag me-1"></i>ID: {{ student.id }}
+        </span>
+      </div>
+      <div class="mb-2">
+        <span class="badge bg-light text-dark">
+          <i class="fas fa-id-badge me-1"></i>Cédula: {{ student.identification }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent">
+    <small class="text-muted">
+      <i class="fas fa-calendar me-1"></i>Registrado en el sistema
+    </small>
+  </div>
+</div>
