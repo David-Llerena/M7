@@ -1,0 +1,9 @@
+<div class="company-info">
+  <h2>Información de la Empresa</h2>
+  <div class="info-grid">
+    <p><strong>Nombre:</strong> {{ company.name }}</p>
+    <p><strong>RUC:</strong> {{ company.ruc }}</p>
+    <p><strong>Dirección:</strong> {{ company.address }}</p>
+    <p><strong>Sucursales:</strong> {{ company.branches.join(', ') }}</p>
+  </div>
+</div>
